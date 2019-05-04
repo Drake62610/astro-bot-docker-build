@@ -5,7 +5,7 @@ pipeline{
         stage('build'){
             steps {
                 sh 'docker build -t astro-bot-docker:${BUILD_NUMBER} .'
-                sh 'docker tag jenkins-demo:${BUILD_NUMBER} jenkins-demo:latest'
+                sh 'docker tag astro-bot-docker:${BUILD_NUMBER} astro-bot-docker:latest'
                 sh 'docker images'
             }
         }
