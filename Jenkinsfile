@@ -12,7 +12,7 @@ def app
     }
 
     stage('publish'){
-        docker.withRegistry('https://registry.hub.docker.com', 'docker-hub-credentials') {
+        docker.withRegistry('drake62610', 'docker-hub-credentials') {
             app.push("latest")
         }        
     }    
