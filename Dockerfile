@@ -7,5 +7,6 @@ RUN pip install discord
 RUN pip install feedparser
 RUN pip install pytumblr
 RUN pip install recastai
+RUN pip install bs4
 
 CMD ["python", "Astro-Bot/main.py"]
