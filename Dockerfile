@@ -8,4 +8,4 @@ RUN pip install feedparser
 RUN pip install pytumblr
 RUN pip install recastai
 
-CMD ["python", "Astro-Bot/main.py"]
+CMD ["python", "Astro-Bot/src/main.py"]
