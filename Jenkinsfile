@@ -10,10 +10,4 @@ def app
         // sh 'docker images'
         app = docker.build("astro-bot-docker")       
     }
-
-    stage('publish'){
-        docker.withRegistry('drake62610', 'docker-hub-credentials') {
-            app.push("latest")
-        }        
-    }    
 }
