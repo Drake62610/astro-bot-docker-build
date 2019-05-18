@@ -5,9 +5,7 @@ def app
     }
 
     stage('build'){
-        // sh 'docker build -t astro-bot-docker:${BUILD_NUMBER} .'
-        // sh 'docker tag astro-bot-docker:${BUILD_NUMBER} astro-bot-docker:latest'
-        // sh 'docker images'
+        sh 'docker rmi $(docker images -q -f dangling=true)'
         app = docker.build("astro-bot-docker")       
     }
 }
